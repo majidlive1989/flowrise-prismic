@@ -10,7 +10,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="py-4 border-b bg-white/70 backdrop-blur-lg sticky top-0 z-50">
+    <nav className="py-4  bg-[#f6fffe] backdrop-blur-lg sticky top-0 z-50">
       <Container className="flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold">
@@ -19,19 +19,12 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
+          <Link href="#pricing" className="hover:text-gray-700">
+            About
+          </Link>
           <Link href="#features" className="hover:text-gray-700">
             Features
           </Link>
-
-          <Link href="#pricing" className="hover:text-gray-700">
-            Pricing
-          </Link>
-
-          <Link href="#testimonials" className="hover:text-gray-700">
-            Testimonials
-          </Link>
-
-          <Button>Get Started</Button>
         </div>
 
         {/* Mobile Button */}
@@ -48,10 +41,8 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden bg-white border-t">
           <Container className="flex flex-col py-4 gap-4">
+            <Link href="#pricing">About</Link>
             <Link href="#features">Features</Link>
-            <Link href="#pricing">Pricing</Link>
-            <Link href="#testimonials">Testimonials</Link>
-            <Button>Get Started</Button>
           </Container>
         </div>
       )}
