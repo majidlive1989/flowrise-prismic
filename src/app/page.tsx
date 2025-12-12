@@ -1,3 +1,4 @@
+import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
 import CTA from "./components/section/CTA";
 import Features from "./components/section/Features";
@@ -13,8 +14,9 @@ export default function Page() {
 
       <Testimonials />
       <Features />
-      <Pricing />
       <CTA />
+      <Pricing />
+      <Footer />
     </>
   );
 }

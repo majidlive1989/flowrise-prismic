@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Container from "../ui/Container";
 import { Menu, X } from "lucide-react";
-import Button from "../ui/Button";
-
+import logo from "../../assets/image/svgviewer-png-output.png";
+import Image from "next/image";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -14,7 +14,13 @@ export default function Navbar() {
       <Container className="flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold">
-          Flowrise
+          <Image
+            quality={100}
+            width={136}
+            height={100}
+            src={logo}
+            alt="flowrise"
+          />
         </Link>
 
         {/* Desktop Menu */}
